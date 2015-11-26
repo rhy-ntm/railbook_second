@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @boook.isbn %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @boook.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @boook.price %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @boook.publish %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @boook.published %>
+</p>
+
+<p>
+  <strong>Cd:</strong>
+  <%= @boook.cd %>
+</p>
+
+<%= link_to 'Edit', edit_boook_path(@boook) %> |
+<%= link_to 'Back', boooks_path %>

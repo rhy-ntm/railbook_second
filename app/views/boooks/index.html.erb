@@ -1,0 +1,35 @@
+<h1>Listing boooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Publish</th>
+      <th>Published</th>
+      <th>Cd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boooks.each do |boook| %>
+      <tr>
+        <td><%= boook.isbn %></td>
+        <td><%= boook.title %></td>
+        <td><%= boook.price %></td>
+        <td><%= boook.publish %></td>
+        <td><%= boook.published %></td>
+        <td><%= boook.cd %></td>
+        <td><%= link_to 'Show', boook %></td>
+        <td><%= link_to 'Edit', edit_boook_path(boook) %></td>
+        <td><%= link_to 'Destroy', boook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boook', new_boook_path %>
