@@ -60,6 +60,11 @@ class BoooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def search
+    @boooks = Boook.where(cd: true)
+    render :index
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
