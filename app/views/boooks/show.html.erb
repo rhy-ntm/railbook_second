@@ -30,5 +30,12 @@
   <%= @boook.cd %>
 </p>
 
+<h2>評判</h2>
+<ul>
+<% @boook.reviews.each do |review| %>
+  <li><%= review.body %></li>
+<% end %>
+</ul>
+
 <%= link_to 'Edit', edit_boook_path(@boook) %> |
 <%= link_to 'Back', boooks_path %>
