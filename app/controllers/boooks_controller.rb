@@ -62,6 +62,7 @@ class BoooksController < ApplicationController
   end
   
   def search
+    @title = params['search']['title']
     @boooks = Boook.where(title: params["search"]["title"])
     render :index
   end

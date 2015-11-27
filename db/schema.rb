@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126075150) do
+ActiveRecord::Schema.define(version: 20151127010210) do
 
   create_table "boooks", force: true do |t|
     t.string   "isbn"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20151126075150) do
     t.string   "publish"
     t.date     "published"
     t.boolean  "cd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "publishes", force: true do |t|
+    t.string   "publishname"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
