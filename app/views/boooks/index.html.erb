@@ -1,7 +1,10 @@
 <h1>Listing boooks</h1>
 
-<%= link_to "検索", search_boooks_path %>
-<%= link_to "リセット", boooks_path %>
+<%= form_tag({:action=>"search"},{:method=>"GET"}) do %>
+  <%= text_field_tag "search[title]" %>
+  <%= submit_tag "検索" %>
+  <%= link_to "リセット", boooks_path %>
+<% end %>
 
 <table>
   <thead>
