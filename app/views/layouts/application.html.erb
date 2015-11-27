@@ -14,6 +14,11 @@
   <li><%= link_to "評判一覧", reviews_path %></li>
   <li><%= link_to "ユーザ一覧", users_path %></li>
 </ul>
+<% if @usr != nil %>
+  <div align="right">
+    ログインユーザー：<%= @usr.username %> | <%= link_to "ログアウト", login_path(:id), method: :delete, data: {confirm: "ログアウトしますか？"} %>
+  </div>
+<% end %>
 
 <%= yield %>
 

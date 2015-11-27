@@ -22,6 +22,10 @@ class LoginController < ApplicationController
     end
   end
   
-  def auth
+  # ログアウトするアクション
+  def destroy
+    session[:usr] = nil
+    reset_session
+    redirect_to login_index_path
   end
 end
