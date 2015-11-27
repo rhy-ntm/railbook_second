@@ -63,7 +63,7 @@ class BoooksController < ApplicationController
   
   def search
     @title = params['search']['title']
-    @boooks = Boook.where(title: params["search"]["title"])
+    @boooks = Boook.where(" title LIKE '%#{@title}%' ")
     render :index
   end
 
