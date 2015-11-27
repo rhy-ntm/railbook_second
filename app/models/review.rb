@@ -1,5 +1,6 @@
 class Review < ActiveRecord::Base
   belongs_to :boook
+  belongs_to :user
   
   # その他バリデーション
   validate :my_validation_method

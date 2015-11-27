@@ -24,8 +24,9 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :publish %><br>
-    <%= collection_select(:boook, :publish, Publish.all, :id, :publishname, :include_blank => true) %>
+    <%= f.label :publish_id %><br>
+    <%#= collection_select(:boook, :publish_id, Publish.all, :id, :publishname, :include_blank => true) %>
+    <%= f.text_field :publish_id %>
   </div>
   <div class="field">
     <%= f.label :published %><br>

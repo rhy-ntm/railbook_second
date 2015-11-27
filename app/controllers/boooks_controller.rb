@@ -75,6 +75,6 @@ class BoooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boook_params
-      params.require(:boook).permit(:isbn, :title, :price, :publish, :published, :cd)
+      params.require(:boook).permit(:isbn, :title, :price, :publish_id, :published, :cd)
     end
 end
