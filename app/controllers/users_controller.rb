@@ -30,6 +30,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        # 登録完了のメール送信
+        NoticeMailer.sendmail_confirm.deliver
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
