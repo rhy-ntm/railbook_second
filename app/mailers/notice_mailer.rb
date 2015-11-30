@@ -9,6 +9,6 @@ class NoticeMailer < ActionMailer::Base
   def sendmail_confirm
     @greeting = "Hi"
 
-    mail to: "kat_tun_jinkazu_love@yahoo.co.jp"
+    mail to: "kat_tun_jinkazu_love@yahoo.co.jp", subject: "登録完了通知"
   end
 end
