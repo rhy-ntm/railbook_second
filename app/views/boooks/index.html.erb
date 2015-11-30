@@ -6,13 +6,14 @@
   <%= link_to "リセット", boooks_path %>
 <% end %>
 
+<%= paginate(@boooks) %>
 <table>
   <thead>
     <tr>
       <th>Isbn</th>
       <th>Title</th>
       <th>Price</th>
-      <th>Publish_id</th>
+      <th>Publish</th>
       <th>Published</th>
       <th>Cd</th>
       <th colspan="3"></th>

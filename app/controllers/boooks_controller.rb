@@ -4,7 +4,7 @@ class BoooksController < ApplicationController
   # GET /boooks
   # GET /boooks.json
   def index
-    @boooks = Boook.all
+    @boooks = Boook.page(params[:page]).per(5)
   end
 
   # GET /boooks/1
